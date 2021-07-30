@@ -1,7 +1,28 @@
-import React, { useState } from 'react';
+import React from "react";
+import { useState } from "react";
+// starts with use
+// component must be uppercase
+// invoke inside function/component body
+// don't call hooks conditonally
+const UseStatebasics = () => {
+  const initials = "Hello World";
 
-const UseStateBasics = () => {
-  return <h2>useState basic example</h2>;
+  const [text, setText] = useState(initials);
+
+  const onClickListener = () => {
+    if (text === initials) {
+      setText("Hello There !");
+    } else {
+      setText(initials);
+    }
+  };
+
+  return (
+    <React.Fragment>
+      <h1>{text}</h1>
+      <button className='btn' onClick={onClickListener}>Change Title</button>
+    </React.Fragment>
+  );
 };
 
-export default UseStateBasics;
+export default UseStatebasics;
