@@ -1,6 +1,8 @@
 - How to initiate react app ?
-
+```
 npx create-react-app tutorial
+
+```
 
 - Inside that directory, you can run several commands:
 
@@ -21,5 +23,5 @@ npx create-react-app tutorial
 ```
   cd tutorial
   npm start
-  
+
 ```
