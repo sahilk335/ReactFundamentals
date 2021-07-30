@@ -5,10 +5,17 @@ import ReactDom from "react-dom";
 import "./index.css";
 
 const firstBook = {
-  img: "https://m.media-amazon.com/images/I/81eB+7+CkUL._AC_UL640_FMwebp_QL65_.jpg",
+  img: "https://images-na.ssl-images-amazon.com/images/I/81eB%2B7%2BCkUL._AC_UL200_SR200,200_.jpg",
   title: "I Love you to the moon and back",
   author: "Tim Warnes",
 };
+const secondBook = {
+  img: "https://images-na.ssl-images-amazon.com/images/I/71aLultW5EL._AC_UL200_SR200,200_.jpg",
+  title: "Our Class is a Family",
+  author: "Shannon Olsen",
+};
+
+
 
 function BookList() {
   return (
@@ -17,8 +24,12 @@ function BookList() {
         img={firstBook.img}
         title={firstBook.title}
         author={firstBook.author}
+      />      
+      <Book
+        img={secondBook.img}
+        title={secondBook.title}
+        author={secondBook.author}
       />
-      <Book title="random Title" number={123} />
     </section>
   );
 }
