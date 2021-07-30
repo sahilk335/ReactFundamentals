@@ -12,10 +12,8 @@ const firstBook = {
 const secondBook = {
   img: "https://images-na.ssl-images-amazon.com/images/I/71aLultW5EL._AC_UL200_SR200,200_.jpg",
   title: "Our Class is a Family",
-  author: "Shannon Olsen",
+  author: "Shannon",
 };
-
-
 
 function BookList() {
   return (
@@ -24,7 +22,14 @@ function BookList() {
         img={firstBook.img}
         title={firstBook.title}
         author={firstBook.author}
-      />      
+      >
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+        beatae, reiciendis alias harum sit necessitatibus sint! Omnis eos velit
+        adipisci.
+      </p>
+      </Book>
+
       <Book
         img={secondBook.img}
         title={secondBook.title}
@@ -36,15 +41,13 @@ function BookList() {
 
 const Book = (props) => {
   console.log(props);
-
+  const { img, title, author } = props;
   return (
     <article className="book">
-      <img src={props.img} alt="" />
-      <h1>{props.title}</h1>
-      <h4>{props.author}</h4>
-      <p>{props.job}</p>
-      <p>{props.title}</p>
-      <p>{props.number}</p>
+      <img src={img} alt="" />
+      <h1>{title}</h1>
+      <h4>{author}</h4>
+      {props.children}
     </article>
   );
 };
